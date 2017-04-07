@@ -28,14 +28,25 @@ class ViewController: UIViewController {
             userIntheMiddleofTyping = true
         }
     }
+    
+    // convert string to double and then double to string
+    var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        set {
+            display.text = String(newValue)
+        }
+    }
 
     @IBAction func performOperation(_ sender: UIButton) {
         userIntheMiddleofTyping = false
         if let mathmeticalSymbol = sender.currentTitle {
             switch mathmeticalSymbol {
             case "π":
-                // convert from double to string
-                display!.text = String(Double.pi)
+                displayValue = Double.pi
+            case "√":
+                displayValue = sqrt(displayValue)
             default:
                 break
             }
