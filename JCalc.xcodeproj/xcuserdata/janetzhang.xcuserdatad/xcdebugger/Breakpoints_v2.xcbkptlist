@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JCalc/CalculatorModel.swift"
-            timestampString = "513380581.193439"
+            timestampString = "513390883.147051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "operations"
             landmarkType = "24">
          </BreakpointContent>

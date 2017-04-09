@@ -8,14 +8,6 @@
 
 import Foundation
 
-func changeSign(operand:Double) -> Double {
-    return -operand
-}
-
-func multiply(op1:Double, op2:Double) -> Double {
-    return op1 * op2
-}
-
 struct CalculatorModel {
     private var accumulator: Double?
     
@@ -32,9 +24,13 @@ struct CalculatorModel {
       "e": Operation.constant(M_E),
       "√": Operation.unaryOperation(sqrt),
       "cos": Operation.unaryOperation(cos),
-      "±": Operation.unaryOperation(changeSign),
-      "×": Operation.binaryOperation(multiply),
-      "=": Operation.equals
+      // closure: funtion in line, see changesign above
+      "±": Operation.unaryOperation({-$0}),
+      "×": Operation.binaryOperation({$0 * $1}),
+      "=": Operation.equals,
+      "+": Operation.binaryOperation({$0 + $1}),
+      "-": Operation.binaryOperation({$0 - $1}),
+      "÷": Operation.binaryOperation({$0 / $1})
     ]
     
     mutating func performOperation(_ symbol: String) {
@@ -54,8 +50,6 @@ struct CalculatorModel {
             case .equals:
                 performPendingBinaryOperation()
             }
-            print("performoperation \(accumulator!)")
-            
         }
         
     }
