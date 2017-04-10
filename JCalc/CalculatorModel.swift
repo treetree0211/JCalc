@@ -8,33 +8,33 @@
 
 import Foundation
 
-//func multiply(op1: Double, op2: Double)  {
-//    var operationStack = Stack<Double>()
-//    let value = op1 * op2
-//    
-//    print(value)
-//    operationStack.push(value)
-//    
-//}
-//    
-//
-////store multiple operation, push
-//struct Stack<Double> {
-//    fileprivate var array: [Double] = []
-//    
-//    mutating func push(_ element: Double) {
-//        array.append(element)
-//    }
-//    
-//    mutating func pop() -> Double? {
-//        return array.popLast()
-//    }
-//    
-//    func peek() -> Double? {
-//        return array.last
-//    }
-//    
-//}
+func multiply(op1: Double, op2: Double)  {
+    var operationStack = Stack<Double>()
+    let value = op1 * op2
+    
+    print(value)
+    operationStack.push(value)
+    
+}
+    
+
+//store multiple operation, push
+struct Stack<Double> {
+    fileprivate var array: [Double] = []
+    
+    mutating func push(_ element: Double) {
+        array.append(element)
+    }
+    
+    mutating func pop() -> Double? {
+        return array.popLast()
+    }
+    
+    func peek() -> Double? {
+        return array.last
+    }
+    
+}
 
 
 
