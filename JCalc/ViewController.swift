@@ -27,6 +27,11 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func reset(_ sender: UIButton) {
+        displayValue = 0
+        display!.text = "0"
+        userIntheMiddleofTyping = false
+    }
     // convert string to double and then double to string
     var displayValue: Double {
         get {
